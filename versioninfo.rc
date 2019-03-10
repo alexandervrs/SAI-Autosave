@@ -1,0 +1,28 @@
+
+1 VERSIONINFO
+FILEVERSION 1,0,3,0
+PRODUCTVERSION 1,0,3,0
+FILEOS 0x4
+FILETYPE 0x2
+{
+BLOCK "StringFileInfo"
+{
+	BLOCK "040904E4"
+	{
+		VALUE "CompanyName", ""
+		VALUE "FileVersion", "1.0.3.0"
+		VALUE "FileDescription", "SAI Autosave"
+		VALUE "InternalName", ""
+		VALUE "LegalCopyright", "Alexander Vourtsis"
+		VALUE "LegalTrademarks", ""
+		VALUE "OriginalFilename", "SAI Autosave.exe"
+		VALUE "ProductName", "SAI Autosave"
+		VALUE "ProductVersion", "1.0.3.0"
+	}
+}
+
+BLOCK "VarFileInfo"
+{
+	VALUE "Translation", 0x0409 0x04E4
+}
+}
