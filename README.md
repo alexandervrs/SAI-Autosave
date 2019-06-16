@@ -1,25 +1,36 @@
-# SAI Autosave
+#SAI Autosave
 
 Autosave feature for Paint Tool SAI
-version 1.0.3 by Alexander Vourtsis (@alexandervrs)
+version 2.0.0 by Alexander Vourtsis (@alexandervrs)
 
 
-### Introduction
-A free AutoIt powered script to autosave your SAI work on set intervals. This utility is provided AS-IS. Use it however you like!
+###Introduction
+A free AutoIt powered script to autosave your SAI work on set intervals by triggering the Ctrl+S shortcut on your SAI window.
+The utility can also take screen snapshots of SAI at set intervals more frequently, so if a crash occurs before you manage to save, you might be able to salvage the drawing and proceed to recreate the art using your screen-captured work in progress as reference. 
+Furthermore as the utility saves, it can also store backups of the SAI files for you complete with date and time in the filename, so in case of a file corruption you can hopefully go back to a previous file and resume work from there.
+Finally it can also just remind you to save by popping a notification at set times.
+This utility is provided AS-IS. Use it however you like!
 
 Note that the script will check if the SAI window has focus first before saving and wait for you to switch to SAI if not (due to the script sending the Ctrl+S key shortcut to the SAI window), if you have the Blink setting on and the icon is visible on the Tray, then it will blink until you focus SAI. Also if you haven't saved the file first, you will probably get the Save dialog the first time the autosave occurs, naturally. You can Quit the utility manually from the system tray. If you close SAI, the script will exit automatically the next time it tries to autosave but doesn't find SAI open.
 
 A word of warning, when you are editing other pictures that are not meant to be auto-saved, it's best to Pause the script first. Remember that the script will trigger the save shortcut, so anything in SAI that has focus, will be saved. To Pause the script from the system tray icon, right click and choose "Pause". When you need autosave back, the same way you can resume the script.
 
-### Installation
+###Installation
 Copy "SAI Autosave.exe" inside your Paint Tool SAI folder (Usually "C:\Paint Tool SAI") and make a shortcut to your Desktop/Taskbar. Every time you click on the icon, it will launch SAI with enabled autosave feature (You can disable this as well with the Settings - see below)
 
 
-### Settings
+###Settings
+You can access the utility's settings window by right clicking on the system tray icon and choosing the Settings option.
 To customize the utility further, you can open the "Autosave Settings.ini" file and tweak the following settings:
 
-* Interval
-Default to 15, this is the minutes interval that the autosave occurs
+* SaveMode (since 2.0.0)
+Defines the manner of autosaving, setting to 0 will save the file and take a snapshot, 1 will only save the file, 2 will only take a snapshot, 3 will take a snapshot and show a notification reminder to save your work and 4 will just show a reminder
+
+* SaveFileInterval
+Default to 15 minutes, this is the interval that the autosave occurs
+
+* SnapshotInterval (since 2.0.0)
+Default to 180000 milliseconds (3 minutes), this is the interval that the snapshot capture occurs, the snapshots are kept in a folder named ~SAIAutosave.Snapshots and will be in your SAI folder
 
 * Autolaunch
 If set to 1 (default), it will also auto-launch sai.exe, useful if you want to make a shortcut to SAI Autosave.exe so that the Autosave functionality is available every time you open SAI through that shortcut.
@@ -40,10 +51,18 @@ The tray icon will blink if SAI does not have focus and the script is trying to 
 * PausedOnStart (since 1.0.1)
 Default is 0, when set to 1, then the Autosave feature will be paused when the utility starts and you will need to enable it via the option in the system tray icon.
 
+* KeepBackups (since 2.0.0)
+This will trigger a file backup whenever the utility autosaves, the backups are kept in a folder named ~SAIAutosave.Backups and will be in your SAI folder
+
 If you accidentally mess up the "Autosave Settings.ini" file, just delete it and the utility will re-create it with its default settings
 
 
-### Changelog
+###Changelog
+* version 2.0.0 (16 June 2019, 05:22 UTC+2)
+ADD: Ability for the utility to also snap screenshots periodically
+ADD: Ability to Backup files when saving or with the context menu
+ADD: Ability to show a reminder
+ADD: Settings dialog with most common options included
 
 * version 1.0.3 (19 April 2015, 20:00 UTC+2)
 FIX: Fixed bug causing script only saving once and then quitting while SAI was still active
