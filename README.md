@@ -4,18 +4,18 @@ Autosave feature for Paint Tool SAI
 version 1.0.3 by Alexander Vourtsis (@alexandervrs)
 
 
-# Introduction
+### Introduction
 A free AutoIt powered script to autosave your SAI work on set intervals. This utility is provided AS-IS. Use it however you like!
 
 Note that the script will check if the SAI window has focus first before saving and wait for you to switch to SAI if not (due to the script sending the Ctrl+S key shortcut to the SAI window), if you have the Blink setting on and the icon is visible on the Tray, then it will blink until you focus SAI. Also if you haven't saved the file first, you will probably get the Save dialog the first time the autosave occurs, naturally. You can Quit the utility manually from the system tray. If you close SAI, the script will exit automatically the next time it tries to autosave but doesn't find SAI open.
 
 A word of warning, when you are editing other pictures that are not meant to be auto-saved, it's best to Pause the script first. Remember that the script will trigger the save shortcut, so anything in SAI that has focus, will be saved. To Pause the script from the system tray icon, right click and choose "Pause". When you need autosave back, the same way you can resume the script.
 
-# Installation
+### Installation
 Copy "SAI Autosave.exe" inside your Paint Tool SAI folder (Usually "C:\Paint Tool SAI") and make a shortcut to your Desktop/Taskbar. Every time you click on the icon, it will launch SAI with enabled autosave feature (You can disable this as well with the Settings - see below)
 
 
-# Settings
+### Settings
 To customize the utility further, you can open the "Autosave Settings.ini" file and tweak the following settings:
 
 * Interval
@@ -43,7 +43,7 @@ Default is 0, when set to 1, then the Autosave feature will be paused when the u
 If you accidentally mess up the "Autosave Settings.ini" file, just delete it and the utility will re-create it with its default settings
 
 
-# Changelog
+### Changelog
 
 * version 1.0.3 (19 April 2015, 20:00 UTC+2)
 FIX: Fixed bug causing script only saving once and then quitting while SAI was still active
