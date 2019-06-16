@@ -374,7 +374,7 @@ Func ShowSettingsDialog()
 	
 	; create window
 	Local $windowwidth = 240
-	Local $windowheight = 450
+	Local $windowheight = 430
 	Local $GUIHandle = GUICreate("Settings", $windowwidth, $windowheight, @DesktopWidth / 2 - ($windowwidth/2), @DesktopHeight / 2 - ($windowheight/2), -1, $WS_EX_OVERLAPPEDWINDOW)
 	
 	; Save Mode
