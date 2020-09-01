@@ -63,7 +63,7 @@ This defines which version of SAI is used, usually determines which window the u
 Whether the utility will popup a dialog before every save attempt asking the user if they want to save the currently opened file.
 
 * WaitUntilProgramOpens (since 3.0.0)
-Milliseconds to wait after SAI has been launched with a file as parameter. Raise this if SAI takes too long to launch, default is 1000 (1 second)
+Milliseconds to wait after SAI has been launched with a file as parameter. Raise this if SAI takes too long to launch, default is 500 (0.5 second)
 
 
 * If you accidentally mess up the "Autosave Settings.ini" file, just delete it and the utility will re-create it with its default settings.
