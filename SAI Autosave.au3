@@ -370,11 +370,6 @@ Func SaveSnapshot()
 	;$hBmp = _ScreenCapture_CaptureWnd("", $hWnd)
 	;_ScreenCapture_SaveImage(@ScriptDir & "\" & $snapshotfolder & "\Snapshot " & $DTString & ".jpg", $hBmp)
 	
-	;_GDIPlus_Startup()
-	;Global $handle = WinGetHandle($hWnd)
-	;Global $hBmp = _ScreenCapture_CaptureWnd_mod($handle, 1280, 720)
-	;_GDIPlus_ImageSaveToFile($hBmp, @ScriptDir & "\" & $snapshotfolder & "\Snapshot " & $DTString & ".jpg")
-	;_GDIPlus_Shutdown()
 	
 	Local $hBmp
 	$hBmp = _ScreenCapture_CaptureWnd_mod("", $hWnd)
