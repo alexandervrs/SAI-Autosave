@@ -1,7 +1,7 @@
 #SAI Autosave
 
 Autosave feature for Paint Tool SAI
-version 3.0.0 by Alexander Vourtsis (@alexandervrs)
+version 3.0.1 by Alexander Vourtsis (@alexandervrs)
 
 
 ###Introduction
@@ -70,6 +70,9 @@ Milliseconds to wait after SAI has been launched with a file as parameter. Raise
 
 
 ###Changelog
+* version 3.0.1 (27 December 2020, 03:10 UTC+2)
+FIX: Changed screenshot method, potential fix for snapshots to work under Linux/Wine
+
 * version 3.0.0 (1 September 2020, 03:10 UTC+2)
 ADD: Support for SAI version 2
 ADD: A quick Setup process when the utility is first used

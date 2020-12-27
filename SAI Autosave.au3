@@ -18,10 +18,11 @@
 #include <GuiEdit.au3>
 #include <ColorConstants.au3>
 #include <SendMessage.au3>
+#include <ScreenCaptureMod.au3>
 
 #RequireAdmin
 
-Global $version = "3.0.0"
+Global $version = "3.0.1"
 
 Global $timeint = 60000
 Global $runcount = 0
@@ -364,8 +365,19 @@ Func SaveSnapshot()
 	;WinActivate($saititle)
 	$hWnd = WinGetHandle($saititle)
 	Sleep(200)
+	
+	;Local $hBmp
+	;$hBmp = _ScreenCapture_CaptureWnd("", $hWnd)
+	;_ScreenCapture_SaveImage(@ScriptDir & "\" & $snapshotfolder & "\Snapshot " & $DTString & ".jpg", $hBmp)
+	
+	;_GDIPlus_Startup()
+	;Global $handle = WinGetHandle($hWnd)
+	;Global $hBmp = _ScreenCapture_CaptureWnd_mod($handle, 1280, 720)
+	;_GDIPlus_ImageSaveToFile($hBmp, @ScriptDir & "\" & $snapshotfolder & "\Snapshot " & $DTString & ".jpg")
+	;_GDIPlus_Shutdown()
+	
 	Local $hBmp
-	$hBmp = _ScreenCapture_CaptureWnd("", $hWnd)
+	$hBmp = _ScreenCapture_CaptureWnd_mod("", $hWnd)
 	_ScreenCapture_SaveImage(@ScriptDir & "\" & $snapshotfolder & "\Snapshot " & $DTString & ".jpg", $hBmp)
 
 	If $blink = "1" Then
